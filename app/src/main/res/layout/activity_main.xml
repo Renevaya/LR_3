@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--объект ViewGroup, который упорядочивает все дочерние элементы в одном направлении: по горизонтали или по вертикали-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"><!--vertical означает, что элементы будут располагаться друг под другом (по вертикали)-->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Первая кнопка"
+        android:layout_marginTop="50dp"
+        android:onClick="onButton1Click"/> <!--"wrap_content" - ширина кнопки будет подстраиваться под ее содержимое (текст)-->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button1"
+        android:layout_marginTop="20dp"
+        android:onClick="onButton2Click"
+        android:text="Вторая кнопка" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Третья кнопка"
+        android:layout_below="@id/button2"
+        android:layout_marginTop="20dp"
+        android:onClick="onButton3Click"/>
+
+</LinearLayout>
